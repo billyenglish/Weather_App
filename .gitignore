@@ -6,4 +6,4 @@ node_modules
 
 # Build Output Directory
 
-/dist/
+dist
