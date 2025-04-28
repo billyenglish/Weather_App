@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules
+
+# Environment Files
+.env
+
+# Build Output Directory
+
+/dist/
