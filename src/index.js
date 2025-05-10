@@ -1,3 +1,2 @@
-import "./assets/styles.css";
+import "./styles/styles.sass";
 
-console.log("Hello World!");
