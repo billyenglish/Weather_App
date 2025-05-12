@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
-                <h1 class="weather-title-app">Weather App</h1>
+                <div class="logo-container">
+                    <h1 class="weather-title-app">Weather App</h1>
+                </div>
                 <div class="search-container">
                     <input type="text" name="weather-search" class="weather-search" id="weather-search">
-                    <button type="text">Search</button>
+                    <button type="text" class="search-button">Search</button>
                 </div>
             </div>
 
             <div class="header-right">
-                <h2>Dark Mode</h2>
+                <h2 class="theme-mode">Dark Mode</h2>
             </div>
         </header>
         <main>
             <section>
-                <div class="headline-forecase">
-                    <div class="city-headline-details">
+                <div class="top-headline-details">
+                    <div>
                         <h2 class="city-forecast">Mostly Sunny</h2>
-                        <h3 class="city-location">Atlanta, GA</h3>
+                        <h3 class="city-location">Atlanta, GA</h3>                                
+                        <h4 class="current-temperature">86</h4>
                     </div>
 
                     <div>
-                        Moon
+                        Weather Icon
+                    </div>
+                </div>
+                <div class="headline-forecast">
+                    <div class="current-weather-details">
+                        <div>
+                            <h2 class="current-feels-link current-details">Feels Like: <span class="feels-link">72.2</span></h2>
+                            <h3 class="current-humidity current-details">Humidity: <span class="humidity">80.9</span></h3>
+                            <h4 class="current-visibility current-details">Visibility: <span class="current-visibility">6.2</span></h4>
+                            <h5 class="current-winddir current-details">Windir: <span class="winddir">87</span></h5>
+                            <h6 class="current-windgust current-details">Windgust: <span class="windgust">14.8</span></h6>
+                            <p class="current-windspeed current-details">Windspeed: <span class="windspeed">7</span></p>
+                        </div>
+                        <div>
+                            <h2 class="current-sunrise current-details">Sunrise: <span class="sunrise">05:16:10</span></h2>
+                            <h3 class="current-sunset current-details">Sunset: <span class="sunset">17:16:10</span></h3>
+                            <h4 class="current-moonphase current-details">Moonphase: <span class="current-moonphase">0.47</span></h4>
+                            <h5 class="current-percipertation current-details">Percipertation: <span class="percipertation">87</span></h5>
+                            <h6 class="current-windgust current-details">Windgust: <span class="windgust">14.8</span></h6>
+                            <p class="current-windspeed current-details">Windspeed: <span class="windspeed">7</span></p>
+                        </div>
                     </div>
                 </div>
             </section>
