@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
     <div class="container">
-        <header classs="header_section">
-            <div class="nav_logo_container">
-                <h1 class="nav_logo">Weather Tracker</h1>
+        <header id="header_container">
+            <div>
+                <h1 id="logo">Weather App</h1>
             </div>
 
             <div class="weather_search_container">
-                <input
-                    type="search"
-                    name="weather_search_city"
-                    class="weather_search_city"
-                    id="weather_search_city"
-                >
-                <button
-                    type="button"
-                    id="weather_search_button"
-                    class="weather_search_button"
-                >
-                    Search
-                </button>
+                <button class="weather_search_button" id="weather_search_button">Search</button>
+                <input type="search">
             </div>
         </header>
         <main>
-            <section class="weather_section">
-                <h2></h2>
+            <section class="current_weather_conditions">
+                <article class="primary_current_conditions">
+                    <h2 id="current_city">City</h2>
+                    <h3 id="current_temperature">Current Temperature</h3>
+                    <h4 id="current_feels_like_temperature">Feels like temperature</h4>
+                    <h5 id="current_weather_conditions">Weather Conditions</h5>
+                    <h6 id="current_day_high_low">
+                        <span id="high_for_day">High for the Day</span>
+                        <span id="low_for_day">Low for the Day</span>
+                    </h6>
+                    <p id="current_time">Time</p>
+                </article>
+                <article class="secondary_current_conditions">
+                    <h2 id="current_humidity">Humdity</h2>
+                    <h3 id="wind_speed">
+                        <span>Wind speed</span>
+                        <span>Wind Direction</span>
+                    </h3>
+                    <h4 id="uv_index">UV Index</h4>
+                    <h5 id="sunrise_sunset">
+                        <span>Sunrise</span>
+                        <span>Sunset</span>
+                    </h5>
+                    <h6 id="current_visibility">Visibility</h6>
+                    <p id="current_air_quality">Air quality</p>
+                </article>
             </section>
         </main>
         <footer>
-            <p>&copyright;</p>
         </footer>
     </div>
 </body>
