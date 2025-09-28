@@ -4,49 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
-        <header id="header_container">
+        <header id="header_section">
             <div>
                 <h1 id="logo">Weather App</h1>
             </div>
 
             <div class="weather_search_container">
-                <button class="weather_search_button" id="weather_search_button">Search</button>
-                <input type="search">
+                <input
+                    type="search"
+                    class="weather_search_input"
+                    id="weather_search_input"
+                >
+                <button
+                    type="button"
+                    class="weather_search_button"
+                    id="weather_search_button"
+                >
+                    Search
+                </button>
             </div>
         </header>
         <main>
-            <section class="current_weather_conditions">
-                <article class="primary_current_conditions">
-                    <h2 id="current_city">City</h2>
-                    <h3 id="current_temperature">Current Temperature</h3>
-                    <h4 id="current_feels_like_temperature">Feels like temperature</h4>
-                    <h5 id="current_weather_conditions">Weather Conditions</h5>
-                    <h6 id="current_day_high_low">
-                        <span id="high_for_day">High for the Day</span>
-                        <span id="low_for_day">Low for the Day</span>
-                    </h6>
-                    <p id="current_time">Time</p>
-                </article>
-                <article class="secondary_current_conditions">
-                    <h2 id="current_humidity">Humdity</h2>
-                    <h3 id="wind_speed">
-                        <span>Wind speed</span>
-                        <span>Wind Direction</span>
+            <section id="primary_weather_content">
+                <article id="primary_weather_column">
+                    <h2 id="current_location"></h2>
+                    <h3 id="current_temperature">
+                        <div id="weather_icon"></div>
+                        <span id="current_temp">83&deg;</span>
                     </h3>
+                    <h4 id="current_weather_conditions">Cloudy</h4>
+                    <h5 id="current_feels_like_temperature">Feels like 55&deg;</h5>
+                    <h6 id="current_day_temperature_high_low">
+                        <span id="current_day_high">Today&apos;s High: 51&deg;</span>
+                        <span id="current_day_low">Today&apos;s Low: 88&deg;</span>
+                    </h6>
+                    <p id="current_day_time">Current Time: <span id="curr_time">1:11 PM</span></p>
+                </article>
+                <article id="secondary_weather_column">
+                    <h2 id="current_humidity">Current Humidity</h2>
+                    <h3 id="wind_speed">Wind Speed</h3>
                     <h4 id="uv_index">UV Index</h4>
                     <h5 id="sunrise_sunset">
-                        <span>Sunrise</span>
-                        <span>Sunset</span>
+                        <span id="sunrise">Sunrise</span>
+                        <span id="sunset">Sunset</span>
                     </h5>
-                    <h6 id="current_visibility">Visibility</h6>
-                    <p id="current_air_quality">Air quality</p>
+                    <h6 id="visibility">Visibility</h6>
+                </article>
+            </section>
+            <section id="primary_weather_hourly_forecast">
+                <article>
+                    <h2 class="weather_section_title">Hourly Forecast</h2>
+                    <div class="weather_hourly_card">
+                        <p>Weather Icon</p>
+                        <p>Currently Weather</p>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2 class="weather_section_title">Weekly Forecase</h2>
+                    <div class="weather_weekly_card">
+                    </div>
                 </article>
             </section>
         </main>
         <footer>
+            <p>&copy; Weather App <span>2024</span> by Billy English.</p>
         </footer>
     </div>
 </body>
