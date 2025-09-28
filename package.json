@@ -28,5 +28,10 @@
     "style-loader": "^4.0.0",
     "webpack-dev-server": "^5.2.2",
     "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "@fontsource/matangi": "^5.2.1",
+    "@fontsource/open-sans": "^5.2.6",
+    "@fontsource/poppins": "^5.2.6"
   }
 }
