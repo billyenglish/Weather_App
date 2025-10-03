@@ -17,7 +17,6 @@ const currentWeatherDisplayFirstPrimary = async () => {
         } = currentConditions;
 
         const timeAPI = datetime;
-        
 
         const selectors = {
             currentLocation: '#current_location',
