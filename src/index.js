@@ -1,5 +1,6 @@
 import './styles.css'
-import currentWeatherDisplay from './js/currentWeatherDisplay.js';
+import currentWeatherFirstDisplay from './js/currentWeatherFirstDisplay.js';
+import currentWeatherSecondDisplay from './js/currentWeatherSecondDisplay.js';
 
-let result = currentWeatherDisplay();
-console.log(result);
+currentWeatherFirstDisplay();
+currentWeatherSecondDisplay();
