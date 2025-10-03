@@ -2,9 +2,7 @@ import weatherAPI from './weatherAPI.js';
 
 export const defaultWeatherLocation = async () => {
     const location = await weatherAPI();
-    console.log(location);
     const { address, currentConditions, days } = location;
-    console.log(address, currentConditions, days );
     return {
         location: address,
         conditions: currentConditions.conditions,
@@ -17,5 +15,8 @@ export const defaultWeatherLocation = async () => {
         visibility: currentConditions.visibility,
         uvIndex: currentConditions.uvindex,
         windSpeed: currentConditions.windspeed,
+        datetime: currentConditions.datetime,
+        sunrise: currentConditions.sunrise,
+        sunset: currentConditions.sunset
     }
 }
