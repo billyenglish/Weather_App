@@ -1,12 +1,10 @@
-// webpack.config.js
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
-    app: "./src/index.js"
+    app: "./src/index.js",
   },
   output: {
     filename: "main.js",
@@ -19,24 +17,49 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
-  },
   module: {
     rules: [
+      // CSS
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      // HTML
       {
         test: /\.html$/i,
         loader: "html-loader",
       },
+      // Images
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "images/[name][ext]",
+        },
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 65,
+              },
+            },
+          },
+        ],
       },
     ],
   },
