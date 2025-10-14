@@ -15,10 +15,11 @@ const weatherDisplay = async () => {
     }
 
     console.log(weatherConditions);
+    console.log(weatherConditions.icon);
 
     const currentLocation = document.querySelector('#current_location');
-    const currentTemperature = document.querySelector('#current_temp');
     const currentWeatherIcon = document.querySelector('#weather_icon_container');
+    const currentTemperature = document.querySelector('#current_temp');
     const currentCondition = document.querySelector('#current_weather_conditions');
     const currentFeelsLikeTemperature = document.querySelector('#current_feels_like_temperature');
     const currentDayHigh = document.querySelector('#current_day_high');
@@ -37,10 +38,9 @@ const weatherDisplay = async () => {
     todaySunset = todaySunset.slice(1, 5);
 
     currentLocation.innerHTML = `${address}`;
-
     currentTemperature.innerHTML = `${weatherConditions.temp} &deg;F`;
+    currentWeatherIcon.innerHTML = `<img src="" alt="" />`
     currentCondition.innerHTML = `${weatherConditions.conditions}`;
-    currentWeatherIcon.innerHTML = ``;
     currentFeelsLikeTemperature.innerHTML = `Feels Like: ${weatherConditions.feelslike} &deg;F`;
     currentDayHigh.innerHTML = `Today's High: ${days[0].tempmax} &deg;F`;
     currentDayLow.innerHTML = `Today's Low ${days[0].tempmin} &deg;F`;

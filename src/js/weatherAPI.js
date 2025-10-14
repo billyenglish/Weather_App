@@ -1,4 +1,4 @@
-const weatherAPI = async (location = 'New York, NY') => {
+const weatherAPI = async (location = 'New York') => {
 
     try {
         const search = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=Y6H3RG3LL82DAAV3MPFXLUQUB`);
