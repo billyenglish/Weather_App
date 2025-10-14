@@ -74,7 +74,7 @@ body {
 #primary_weather_content {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 5rem 2rem 2rem 2rem;
     gap: 2.5rem;
 }
 
@@ -86,12 +86,12 @@ body {
 #primary_weather_column {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 #primary_first_content {
     display: flex;
-    gap: 1.5rem;
+    gap: 8rem;
 }
 
 #secondary_weather_column {
@@ -102,40 +102,41 @@ body {
 }
 
 #current_location {
-    font-size: 1.75rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
 }
 
 #current_temperature {
     display: flex;
-    font-size: 1.9rem;
+    font-size: 1.75rem;
     font-weight: 500;
     gap: .5rem;
     align-items: center;
 }
 
 #current_weather_conditions {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .2rem;;
 }
 
 #current_feels_like_temperature {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 #current_day_temperature_high_low, #sunrise_sunset {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
-    font-weight: 500;
-    gap: .75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    gap: 1.25rem;
 }
 
 #current_day_time {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 #current_humidity {
