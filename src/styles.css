@@ -24,10 +24,10 @@ body {
 
 /* Container Section */
 
-.container {
+#container {
     min-height: 100vh;
     background: rgba(0, 0, 0, .5);
-    background-size: cover;
+    width: 100%;
 }
 
 /* Header Section */
