@@ -26,7 +26,9 @@ body {
 
 #container {
     min-height: 100vh;
-    background: rgba(0, 0, 0, .5);
+    background: url('./weather_background/partly_cloudy.jpg');
+    background-position: center;
+    background-size: cover;
     width: 100%;
 }
 
