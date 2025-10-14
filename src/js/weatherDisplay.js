@@ -1,5 +1,4 @@
 import weatherAPIResult from './weatherAPIResult.js';
-import partlyCloud from '../weather_background/partly_cloudy.jpg';
 
 const weatherDisplay = async () => {
 
@@ -50,11 +49,6 @@ const weatherDisplay = async () => {
     currentSunrise.innerHTML = `Sunrise: ${todaySunrise} AM`;
     currentSunset.innerHTML = `Sunset: ${todaySunset} PM`;
     currentVisibility.innerHTML = `Visibility: ${weatherConditions.visibility}%`;
-    currentBackgroundImage.style.background = `url(${partlyCloud})`;
-    currentBackgroundImage.style.backgroundSize = `cover`;
-    currentBackgroundImage.style.backgroundPosition = 'center';
-    currentBackgroundImage.style.backgroundRepeat = 'no-repeat';
-
 }
 
 export default weatherDisplay;
