@@ -1,4 +1,5 @@
 import weatherAPIResult from './weatherAPIResult.js';
+import partlyCloudyImage from '../weather_background/partly_cloudy.jpg';
 
 const weatherDisplay = async () => {
 
@@ -18,7 +19,6 @@ const weatherDisplay = async () => {
     console.log(weatherConditions.icon);
 
     const currentLocation = document.querySelector('#current_location');
-    const currentWeatherIcon = document.querySelector('#weather_icon_container');
     const currentTemperature = document.querySelector('#current_temp');
     const currentCondition = document.querySelector('#current_weather_conditions');
     const currentFeelsLikeTemperature = document.querySelector('#current_feels_like_temperature');
@@ -30,6 +30,7 @@ const weatherDisplay = async () => {
     const currentSunrise = document.querySelector('#sunrise');
     const currentSunset = document.querySelector('#sunset');
     const currentVisibility = document.querySelector('#visibility');
+    const currentBackground = document.querySelector('.container');
 
     let todaySunrise = weatherConditions.sunrise;
     todaySunrise = todaySunrise.slice(1, 5);
@@ -39,7 +40,6 @@ const weatherDisplay = async () => {
 
     currentLocation.innerHTML = `${address}`;
     currentTemperature.innerHTML = `${weatherConditions.temp} &deg;F`;
-    currentWeatherIcon.innerHTML = `<img src="" alt="" />`
     currentCondition.innerHTML = `${weatherConditions.conditions}`;
     currentFeelsLikeTemperature.innerHTML = `Feels Like: ${weatherConditions.feelslike} &deg;F`;
     currentDayHigh.innerHTML = `Today's High: ${days[0].tempmax} &deg;F`;
@@ -50,7 +50,11 @@ const weatherDisplay = async () => {
     currentSunrise.innerHTML = `Sunrise: ${todaySunrise} AM`;
     currentSunset.innerHTML = `Sunset: ${todaySunset} PM`;
     currentVisibility.innerHTML = `Visibility: ${weatherConditions.visibility}%`;
-
+    currentBackground.style.background = `url(${partlyCloudyImage})`;
+    currentBackground.style.backgroundSize = 'cover';
+    currentBackground.style.backgroundRepeat = 'no-repeat';
+    currentBackground.style.backgroundPosition = 'center';
+    currentBackground.style.backgroundAttachment = 'fixed';
 }
 
 export default weatherDisplay;
