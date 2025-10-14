@@ -51,7 +51,9 @@ const weatherDisplay = async () => {
     currentSunset.innerHTML = `Sunset: ${todaySunset} PM`;
     currentVisibility.innerHTML = `Visibility: ${weatherConditions.visibility}%`;
     currentBackgroundImage.style.background = `url(${partlyCloud})`;
-    currentBackgroundImage.style.backgroundSize = `cover`
+    currentBackgroundImage.style.backgroundSize = `cover`;
+    currentBackgroundImage.style.backgroundPosition = 'center';
+    currentBackgroundImage.style.backgroundRepeat = 'no-repeat';
 
 }
 
