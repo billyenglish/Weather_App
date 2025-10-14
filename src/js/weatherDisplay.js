@@ -1,5 +1,5 @@
 import weatherAPIResult from './weatherAPIResult.js';
-import partlyCloudyImage from '../weather_background/partly_cloudy.jpg';
+import partlyCloud from '../weather_background/partly_cloudy.jpg';
 
 const weatherDisplay = async () => {
 
@@ -30,7 +30,7 @@ const weatherDisplay = async () => {
     const currentSunrise = document.querySelector('#sunrise');
     const currentSunset = document.querySelector('#sunset');
     const currentVisibility = document.querySelector('#visibility');
-    const currentBackground = document.querySelector('.container');
+    const currentBackgroundImage = document.querySelector('#container');
 
     let todaySunrise = weatherConditions.sunrise;
     todaySunrise = todaySunrise.slice(1, 5);
@@ -50,11 +50,9 @@ const weatherDisplay = async () => {
     currentSunrise.innerHTML = `Sunrise: ${todaySunrise} AM`;
     currentSunset.innerHTML = `Sunset: ${todaySunset} PM`;
     currentVisibility.innerHTML = `Visibility: ${weatherConditions.visibility}%`;
-    currentBackground.style.background = `url(${partlyCloudyImage})`;
-    currentBackground.style.backgroundSize = 'cover';
-    currentBackground.style.backgroundRepeat = 'no-repeat';
-    currentBackground.style.backgroundPosition = 'center';
-    currentBackground.style.backgroundAttachment = 'fixed';
+    currentBackgroundImage.style.background = `url(${partlyCloud})`;
+    currentBackgroundImage.style.backgroundSize = `cover`
+
 }
 
 export default weatherDisplay;
