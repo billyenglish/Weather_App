@@ -74,7 +74,7 @@ body {
 #primary_weather_content {
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem 2rem 1.5rem 2rem;
+    margin: 2rem 2rem 2rem 2rem;
     gap: 2.5rem;
 }
 
